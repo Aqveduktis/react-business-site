@@ -8,9 +8,9 @@ export const Accordian = ( {answer, question} ) => {
         clicked ? setClicked(false) : setClicked(true)
     }
     return (
-        <section>
+        <article>
             <button onClick = {handlebutton} > {question} </button>
             {clicked && <Answer answer = {answer} />}
-        </section>
+        </article>
     )
 }
