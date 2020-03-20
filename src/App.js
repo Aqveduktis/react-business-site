@@ -7,7 +7,8 @@ export const App = () => {
     <div>
       Find me in src/app.js!
       <Header title = "Coffie Shop" words = "best coffie in town" />
-      <Accordian />
+      <Accordian question = "Question one" answer = "Will you still love me in prison" />
+      <Accordian question = "Question two" answer = "Cry me a river" />
     </div>
   )
 }

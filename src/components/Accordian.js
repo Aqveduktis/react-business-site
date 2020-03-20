@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {Answer} from './Answer'
 
-export const Accordian = () => {
+export const Accordian = ( {answer, question} ) => {
     const [clicked, setClicked] = useState(false)
     const handlebutton = (evt) => {
         evt.preventDefault()
@@ -9,8 +9,8 @@ export const Accordian = () => {
     }
     return (
         <section>
-            <button onClick = {handlebutton} >Question one</button>
-            {clicked && <Answer answer = 'Will you love me in prison' />}
+            <button onClick = {handlebutton} > {question} </button>
+            {clicked && <Answer answer = {answer} />}
         </section>
     )
 }
