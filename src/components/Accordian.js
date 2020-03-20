@@ -3,10 +3,14 @@ import {Answer} from './Answer'
 
 export const Accordian = () => {
     const [clicked, setClicked] = useState(false)
+    const handlebutton = (evt) => {
+        evt.preventDefault()
+        clicked ? setClicked(false) : setClicked(true)
+    }
     return (
         <section>
-            <button>Question one</button>
-            <Answer answer = 'Will you love me in prison' />
+            <button onClick = {handlebutton} >Question one</button>
+            {clicked && <Answer answer = 'Will you love me in prison' />}
         </section>
     )
 }
