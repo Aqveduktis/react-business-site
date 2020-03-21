@@ -8,8 +8,8 @@ export const Accordian = ( {answer, question} ) => {
         clicked ? setClicked(false) : setClicked(true)
     }
     return (
-        <article>
-            <button onClick = {handlebutton} > {question} </button>
+        <article className = "pair">
+            <button className = "question" onClick = {handlebutton} > {question} </button>
             {clicked && <Answer answer = {answer} />}
         </article>
     )
